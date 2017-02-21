@@ -1,5 +1,5 @@
 {
-  "firstState": "get_phones",
+  "firstState": "get_phone",
   "states": {
     "get_phone": {
       "output": {
