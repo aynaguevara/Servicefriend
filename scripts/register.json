@@ -1,0 +1,175 @@
+{
+  "firstState": "get_phone",
+  "states": {
+    "get_phone": {
+      "output": {
+      	  "type": "ogm",
+          "text": ["May I please have your mobile number?"]
+      },
+      "exec": {
+          "type":"entity_extraction",
+          "entity_type":"phone_number",
+          "locale":"PH",
+          "field_name":"phone_number",
+          "title": "phone number",
+          "filters": [ {
+            "expression": "!(F:starts_with(X,\"0905\")) and !(F:starts_with(X,\"0906\")) and !(F:starts_with(X,\"0917\")) and !(F:starts_with(X,\"0977\")) and !(F:starts_with(X,\"0937\"))",
+            "error_key": "not_postpaid"
+          } ]
+      },
+      "errors": {
+        "miss": ["Please enter a valid postpaid number","Please enter a valid postpaid number"],
+        "wrong": ["Sorry, this doesn't seem to be a Globe mobile number. Please try again."],
+        "not_postpaid": ["Thank you for your interest #[prospect:name], this is currenlty for Globe Platinum customers only. For postpaid concerns, you may chat with Gie of Globe."]
+      },
+      "on": {
+         "approve_full_name:visited":"get_full_name",
+      	 "default": "approve_full_name"
+      }
+    },
+    "approve_full_name": {
+      "output": {
+        "type": "menu",
+        "text": ["Thank you for the information, #[prospect:name]! To confirm, did I get your full name right?"],
+        "options": ["Yes","No"]
+      },
+      "exec": {
+         "type": "menu"
+      },
+      "on": {
+      	"_menu_1": {"enrichments":[{"field":"name","value":"#[prospect:name]"}],
+      				"state":"approve_account_under_name"}, 
+      	"_menu_2": "get_full_name"
+      }
+    },
+    "get_full_name": {
+      "output": {
+      	  "type": "ogm",
+          "text": "What name then would you prefer?"
+      },
+      "exec": {
+          "type":"entity_extraction",
+          "entity_type":"full_name",
+          "locale":"PH",
+          "field_name":"name"
+      },
+      "errors": {
+      	"one_name": ["Please enter your full name - first name and last name"]
+      },
+      "on": {
+      		"default": "approve_account_under_name"
+       } 
+    },
+    "get_birth_date":{
+      "output": {
+          "type": "ogm",
+          "text": "One last question, what is your birth date?"
+      },
+      "exec": {
+          "type":"entity_extraction",
+ 		      "entity_type": "date",
+		       "field_name": "birth_date",
+		       "title": "birth date",
+           "format": "MMMMM d yyyy",
+           "filters": [
+           		{ 
+           			"expression": "X > TODAY",
+           		    "error_key": "future_date"
+           		},
+           		{ 
+           			"expression": "X < \"1900-01-01\"",
+           		    "error_key": "too_old"
+           		}
+           	]
+           	
+           
+          },
+      "errors": {
+      	"miss": ["Please enter your birth date","Your birth date is required"],
+      	"future_date": ["Please don't enter a futuristic date"],
+      	"too_young": ["You must be 18+ to participate"],
+      	"too_old": ["This date is too long ago, please try again"]
+      },
+      "on": {        
+        "default":"approve_form"
+      }
+    },
+    "approve_form_ogm": {
+      "output": {
+      	  "type": "ogm"
+      },
+      "on": {
+      	"default":"approve_form"
+      }       
+    },
+
+    "approve_account_under_name": {
+      "output": {
+      	  "type": "menu",
+          "text": ["Got it! One last question, may I confirm if the mobile number #[form:phone_number] is under your name?","Is this number #[form:phone_number] listed under your name?"],
+          "options": ["Yes","No"]
+      },
+      "exec": {
+         "type": "menu",
+         "field_name": "account_under_your_name"
+      },
+      "on": {
+      	"_menu_1":"approve_form",
+      	"_menu_2":"approve_form",
+      	"default":"approve_form"
+      }       
+    },
+
+    "select_change": {
+      "output": {
+      	  "type": "menu",
+          "text": "What detail would you like to update?",
+          "options": ["Phone number","Name","Account under name"]
+      },
+      "exec": {
+         "type": "menu"
+      },
+      "on": {
+      	"_menu_1":{"mode":"clean","state":"get_phone"},
+      	"_menu_2":{"mode":"clean","state":"get_full_name"},
+      	"_menu_3":{"mode":"clean","state":"approve_account_under_name"}
+      }		        
+    },
+
+    "send_form": {
+		"exec": {
+			"type": "api",
+			"url": "ENV GIE_REGISTRATION_URL http://dev.servicefriend.com/execution-service/writer/gie_registration.csv",
+			"url2": "http://localhost/Servicefriend/ee/gie_send_registration_form.php",
+			"params": [
+				{ "body": true,
+				 "template": "gie_registration" }
+			]
+		},
+		"on": {
+			"default":"write_form_to_db" 
+		}
+		
+    },
+    "write_form_to_db": {
+		"exec": {
+			"type": "api",
+			"url": "ENV REGISTERED_LIST_URL http://dev.servicefriend.com/execution-service/registered_list",
+			"params": [
+				{ "body": true,
+				 "template": "write_registration_to_db" }
+			]
+		},
+		"on": {
+			"default":"approval_message" 
+		}        
+    },
+
+    "approval_message": {
+      "output": {
+      	  "type": "ogm",
+          "text": "Thank you! Is there anything I can help you with today?"
+      }
+    }
+  }
+} 

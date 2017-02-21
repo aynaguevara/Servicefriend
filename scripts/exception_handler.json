@@ -1,0 +1,209 @@
+{
+  "firstState": "icm_high_level_classifier",
+  "states": {  
+    "icm_high_level_classifier": {
+        "output": {
+          "type": "none",
+          "text": ""
+        },
+      "on": {
+        "HLClassStory": "!",
+        "HLClassData": "!",
+        "HLClassGreeting" : "greeting",
+        "HLClassQuestion" : "!",
+        "HLClassTypo" : "typo",
+        "HLClassPing" : "ping",
+        "HLClassApproval": "approval",
+        "HLClassDenial": "?",
+        "HLClassNull": "!",
+        "HLClassDisappointment": "?",
+        "HLClassThanks": "thanks",
+        "HLClassOneMoment" : "one_moment",
+        "HLClassHaveQ": "have_q",
+        "HLClassDegrading": "?",
+        "HLClassMissingDetails": "missing_details",
+        "HLClassSorry": "sorry",
+        "HLClassBye": "bye",
+        "HLClassStrongApproval": "strong_approval",
+        "HLClassAskApproval": "?",
+        "HLClassImpatience": "impatience",
+        "HLClassOfferInfo": "offer_info",
+        "HLClassEnd": "end",
+        "HLClassAskEmail": "?",
+        "HLClassImHere": "Im_here",
+        "HLClassAlreadyGave": "?",
+        "HLClassImBack": "im_back",
+        "HLClassWelcome": "!",
+        "HLClassAskHuman": "?",
+        "HLClassHappy": "!",
+        "HLClassOneMoreThing": "one_more_thing",
+        "HLClassImFine": "?",
+        "HLClassHowAreYou": "how_are_you",
+        "HLClassIWillWait": "i_will_wait",
+        "HLClassPraising": "praising",
+        "HLClassGotNews": "?",
+        "HLClassRUBot": "r_u_bot",
+        "default" : "!"
+      }
+    } ,
+    "ping": {
+        "output": {
+          "type": "ogm",
+          "text": "I'm always here :-)"
+        }
+    },
+
+ "greeting": {
+        "output": {
+          "type": "ogm",
+          "text": ["Hi! :)","Hi!:)"],
+          "rotation": "random"
+        }
+ },
+	
+ "approval": {
+        "output": {
+          "type": "ogm",
+          "text": ":-)"
+        }
+ },
+	
+ "denial": {
+        "output": {
+          "type": "ogm",
+          "text": "ok"
+        }
+ },
+	
+ "typo": {
+        "output": {
+          "type": "ogm",
+          "text": "Got it!"
+        }
+ },
+	
+ "disappointment": {
+        "output": {
+          "type": "ogm",
+          "text": ["I'm sorry to hear that",":-("]
+        }
+ },
+		
+ "strong_approval": {
+        "output": {
+          "type": "ogm",
+          "text": "Thank you very much!"
+        }
+ },
+		
+ "Im_here": {
+        "output": {
+          "type": "ogm",
+          "text": "good to have you here"
+        }
+ },
+	
+    "thanks": {
+        "output": {
+          "type": "ogm",
+          "text": "Sure thing!"
+        }
+    },
+    "one_moment": {
+        "output": {
+          "type": "ogm",
+          "text": "Sure, no problem, I'm always here"
+        }
+    },
+    "have_q": {
+        "output": {
+          "type": "ogm",
+          "text": "How can i help you?"
+        }
+    },
+    "missing_details": {
+        "output": {
+          "type": "ogm",
+          "text": "That's ok, I'll wait for it and we'll continue from this point"
+        }
+    },
+    "sorry": {
+        "output": {
+          "type": "ogm",
+          "text": "No worries"
+        }
+    },
+    "bye": {
+        "output": {
+          "type": "ogm",
+          "text": "I hope we will talk again soon"
+        }
+    },
+    "impatience": {
+        "output": {
+          "type": "ogm",
+          "text": "Thank you for waiting"
+        }
+    },
+    "offer_info": {
+        "output": {
+          "type": "ogm",
+          "text": "Soon I'll ask you everything I need to know :)"
+        }
+    },
+    "end": {
+        "output": {
+          "type": "ogm",
+          "text": "Thank you for chatting with me. hope to see you soon!"
+        }
+    },
+    "im_back": {
+        "output": {
+          "type": "ogm",
+          "text": "Great!"
+        }
+    },
+     "one_more_thing": {
+        "output": {
+          "type": "ogm",
+          "text": "Sure thing, go ahead!"
+        }
+    },
+     "my_name_is": {
+        "output": {
+          "type": "ogm",
+          "text": "ok!"
+        }
+    },
+     "i_will_wait": {
+        "output": {
+          "type": "ogm",
+          "text": "Thanks!"
+        }
+    },
+     "praising": {
+        "output": {
+          "type": "ogm",
+          "text": "Thanks :-)"
+        }
+    },
+     "got_news": {
+        "output": {
+          "type": "ogm",
+          "text": "Please wait, we will update you."
+        }
+    },
+     "how_are_you": {
+        "output": {
+          "type": "ogm",
+          "text": "Good, thank you!"
+        }
+    },
+     "r_u_bot": {
+        "output": {
+          "type": "ogm",
+          "text": "I am a technology supported by real people. :)"
+        }
+    }
+ }
+}

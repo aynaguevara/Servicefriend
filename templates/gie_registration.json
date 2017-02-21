@@ -1,0 +1,6 @@
+{
+	"name":"#[form:name]",
+	"phone":"#[form:phone_number]",
+	"facebook_id":"#[prospect:channel_user_id]",
+	"under_your_name":"#[form:account_under_your_name]"
+}
