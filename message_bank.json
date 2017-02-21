@@ -1,0 +1,71 @@
+{
+  "splash_screen": {
+    "type": "template",
+    "payload": {
+      "type": "generic",
+      "generic_template_options": [
+        {
+           "title": "I'm Thea of Globe Platinum",
+          "image_url": "https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.0-9/16640656_1418114541532656_6649049834142386498_n.jpg?oh=a34fe9ea59c6129396cb03850fb52c91&oe=5948C8A8",
+          "subtitle": "Good day! I’m here to assist you with your Globe Platinum plan. Before we start, may I have your mobile number?"
+        }
+      ]
+    }
+  },
+  "default_first_message": {
+    "type": "text",
+    "text": "Thank you for your message."
+  },
+		"after_restart_code": {
+    "type": "text",
+    "text": "How may I help you?"
+  },
+		
+  "post_splash_first_message": {
+    "type": "text",
+    "text": "Thanks for reaching out! Before we start, I just have a few questions:"
+  },
+		"closure": {
+    "type": "text",
+    "text": "Thanks, always at your service"
+  },
+  "failute_warning": {
+    "type": "template",
+    "payload": {
+      "type": "button",
+      "text": "I'm sorry. I'm still in a learning process. Do you want me to consult with one of our expert?",
+      "buttons": [
+        {
+          "type": "postback",
+          "title": "Yes, agent",
+          "id": "get_agent"
+        },
+        {
+          "type": "postback",
+          "title": "No. Let's continue!",
+          "id": "continue"
+        }
+      ]
+    }
+  },
+		"onfail_transfer": {
+    "type": "text",
+    "text": "Let me check..."
+  },
+		"ooo": {
+    "type": "text",
+    "text": "Thanks for your message, but I’m not available at the moment. Will be happy to chat 8:00 AM-10:00 PM daily. You can send your message while I’m out and I will get back to you soonest."
+  },
+		"transfer_ack": {
+    "type": "text",
+    "text": "No problem. I'll be with you shortly."
+  },
+		"transfer_ack_ooo": {
+    "type": "text",
+    "text": "Sorry. Don't have any online experts at the moment. I'm transferring to expert but next online time is ${onlinetime}"
+  },
+		"restart_ack": {
+    "type": "text",
+    "text": "Hi! :) , thanks for reaching out, how can I help you?"
+  }
+}

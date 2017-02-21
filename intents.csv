@@ -1,0 +1,120 @@
+iid,intent_text,rank,iclass,isubclass,scripts
+1001,fix internet on device,104,,,center
+1002,get plan details,90,,,center
+1003,check current usage,74,,,center
+1004,get bill explained,59,,,center
+1012,check bill due,53,,,center
+1007,check ballance,51,,,center
+1008,get bill,45,,,center
+1006,check credit limit,38,,,center
+1009,understand message from provider,37,,,center
+1011,know why data package is due,33,,,center
+1019,talk to a representative,32,,,center
+1126,know why provider called,25,,,center
+1021,know if changes made,22,,,center
+1018,change plan,18,,,center
+1022,purchase a new SIM,18,,,center
+1023,join Spotify service,17,,,center
+1082,availe Spotify freebie,17,,,center
+1093,availe HooQ freebie,17,,,center
+1110,join HooQ service,17,,,center
+1026,Get Special Promo,15,,,center
+1032,Report a reception issue,14,,,center
+1017,Get Openning Hours or Addres,13,,,center
+1015,Get a roaming plan,13,,,center
+1027,Fix Landline Problem,13,,,center
+1028,Get breakdown details,12,,,center
+1029,call abroad,12,,,center
+1128,report a reccuring problem,12,,,center
+1031,purchase a device,11,,,center
+1020,file a complaint,10,,,center
+1033,get refund or compensation,10,,,center
+1034,get paperless bill,10,,,center
+1088,get plan details by mail or fax,10,,,center
+1129,know how to share load,10,,,center
+1035,get technical support for app,9,,,center
+1114,change phone number,9,,,center
+1024,disconnect,8,,,center
+1036,cancel voicemail,8,,,center
+1037,get repair status,8,,,center
+1038,get info about plans,8,,,center
+1039,pay outstanding balance,8,,,center
+1040,leave to competitor,8,,,center
+1041,check refund status,8,,,center
+1081,pay bill,8,,,center
+1127,Pay bill in advance,8,,,center
+1042,dispute a charge,7,,,center
+1043,unsubscribe from HooQ,7,,,center
+1044,check repair cost,7,,,center
+1013,check activation status,6,,,center
+1045,get new plan or promo activated,6,,,center
+1046,subscribe to broadband,6,,,center
+1047,get tech help with website/app,6,,,center
+1049,open line for calls abroad,6,,,center
+1050,freez subscription,5,,,center
+1051,cancel a deal,5,,,center
+1016,complain call center unavailable,4,,,center
+1025,praise a service,4,,,center
+1052,get technical help with device,4,,,center
+1054,fix reception issue,4,,,center
+1055,fix roaming issue,4,,,center
+1056,get confirmation,4,,,center
+1057,allow data usage,4,,,center
+1058,leave because of price,4,,,center
+1059,reconnect disabled line,4,,,center
+1060,get tech help for SMS/MMS,3,,,center
+1061,change account ownership,3,,,center
+1062,backup device data,3,,,center
+1063,get call center phone number,3,,,center
+1064,check delivery status,3,,,center
+1067,block calls to abroad,3,,,center
+1068,open calls to abroad,3,,,center
+1130,get sent documents from provider,3,,,center
+1069,change number,2,,,center
+1070,reduce plan cost,2,,,center
+1071,speak to a manager,2,,,center
+1072,get help with broadband,2,,,center
+1073,report lost device,2,,,center
+1074,change address,2,,,center
+1075,check how many payments remain,2,,,center
+1130,ask provider to resend info,2,,,center
+1077,change billing cycle,1,,,center
+1078,check usage of roaming,1,,,center
+1079,check if there is device insurance,1,,,center
+1080,fix SIM,1,,,center
+1083,get bill charge date,1,,,center
+1084,recontract,1,,,center
+1085,dial from abroad,1,,,center
+1086,add a new line,1,,,center
+1087,block line for calls to abroad,1,,,center
+1090,inquire about device insurance,1,,,center
+1091,open the line for roaming,1,,,center
+1094,fix voicemail,1,,,center
+1095,get technical help for email,1,,,center
+1096,open a lost decide or SIM,1,,,center
+1097,get tech help while abroad,1,,,center
+1099,block a certain number,0,,,center
+1100,cancel device insurance,0,,,center
+1101,update personal details,0,,,center
+1102,check usage for calling abroad,0,,,center
+1103,check status of an open issue,0,,,center
+1104,get internet setting for device,0,,,center
+1105,purchase insurance for device,0,,,center
+1107,block line for roaming,0,,,center
+1108,verify no outsdanding balance,0,,,center
+1109,extend a roaming plan,0,,,center
+1112,know expected monthly charges,0,,,center
+1113,unsubscribe from Spotify,0,,,center
+1115,get help with s GPS issue,0,,,center
+1117,check if line is open for abroad,0,,,center
+1119,get discount for a charge,0,,,center
+1120,get bill for a certain month,0,,,center
+1122,change voicemail openning message,0,,,center
+1123,check cost for voicemail abroad,0,,,center
+1124,check ticket / reference number,0,,,center
+1125,check insurance expiration date,0,,,center
+1131,stop service after free trial,15,,,center
+1132,delay payment,6,,,center
+1133,inquire about event,6,,,center
+1134,report fraudulent message,2,,,center
+1135,confirm particapance,0,,,center

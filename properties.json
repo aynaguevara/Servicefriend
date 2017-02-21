@@ -1,0 +1,6 @@
+{
+    "name" : "whateverphones",
+    "channel_id" : "491933860963007",
+				"new_customer_script"  : "register",
+				"default_wait_time_between_msgs"  : 3
+}
