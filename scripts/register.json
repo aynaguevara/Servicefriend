@@ -103,23 +103,6 @@
       }       
     },
 
-    "approve_account_under_name": {
-      "output": {
-      	  "type": "menu",
-          "text": ["Got it! One last question, may I confirm if the mobile number #[form:phone_number] is under your name?","Is this number #[form:phone_number] listed under your name?"],
-          "options": ["Yes","No"]
-      },
-      "exec": {
-         "type": "menu",
-         "field_name": "account_under_your_name"
-      },
-      "on": {
-      	"_menu_1":"approve_form",
-      	"_menu_2":"approve_form",
-      	"default":"approve_form"
-      }       
-    },
-
     "select_change": {
       "output": {
       	  "type": "menu",
